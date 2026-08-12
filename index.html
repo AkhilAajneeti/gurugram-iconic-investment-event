@@ -776,6 +776,14 @@
       grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
     }
 
+    /* beside the form card the copy column is narrow - keep the four
+       facts as a tidy 2x2 instead of a 3 + 1 orphan row */
+    @media (min-width: 1040px) {
+      .meta {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     .meta .m {
       position: relative;
       display: flex;
@@ -2553,7 +2561,7 @@
         <a href="#venue">Venue</a>
       </nav>
       <div class="top-cta">
-        <a class="btn-ghost" href="tel:+919711178610">97111 78610</a>
+        <a class="btn-ghost" href="tel:+919711178610">9711178610</a>
         <a class="btn-gold" href="#register">
           Register Now
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
@@ -2631,6 +2639,8 @@
           <b>LANDMARK ONE Investment Event</b> and explore a landmark
           commercial opportunity &mdash; lockable high-street retail in a
           <b>G+39 tower with the largest floor plate in NCR</b>.
+          <b>Investment starting &#8377;3.5 Cr* onwards</b> for lockable retail
+          shops.
         </p>
 
         <!-- event meta -->
@@ -2659,11 +2669,22 @@
             <span class="ic" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round">
-                <path d="M6 3h12M6 8h12M9 13c6 0 6 8 0 8h9" />
-                <path d="M6 13h6" />
+                <path d="M4 9h16l-1 11H5L4 9z" />
+                <path d="M8 9V6a4 4 0 0 1 8 0v3" />
               </svg>
             </span>
-            <div class="tx"><i>Investment</i><b>&#8377;3.5 Cr* onwards</b></div>
+            <div class="tx"><i>Lockable Retail Shops</i><b>&#8377;3.5 Cr* onwards</b></div>
+          </div>
+          <div class="m">
+            <span class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 9h18M5 9V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3" />
+                <path d="M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9" />
+                <path d="M9 13h6" />
+              </svg>
+            </span>
+            <div class="tx"><i>Virtual Shops</i><b>&#8377;90 Lakhs* onwards</b></div>
           </div>
         </div>
 
@@ -2778,8 +2799,8 @@
               <div class="f-row" id="rowLoc">
                 <span class="f-lbl">Where do you want to invest?</span>
                 <div class="chips" role="radiogroup" aria-label="Investment location">
-                  <label class="chip"><input type="radio" name="city"
-                      value="Gurugram - Golf Course Extension Road" checked /><span>Gurugram &ndash; Golf Course Ext.
+                  <label class="chip"><input type="radio" name="city" value="Gurugram - Golf Course Extension Road"
+                      checked /><span>Gurugram &ndash; Golf Course Ext.
                       Road</span></label>
                 </div>
                 <div id="otherWrap">
@@ -2795,8 +2816,8 @@
                 <div class="days" role="radiogroup" aria-label="Event day">
                   <label class="day"><input type="radio" name="day" value="Saturday, 22 August"
                       checked /><span><i>Saturday</i><b>22 August 2026</b></span></label>
-                  <label class="day"><input type="radio" name="day"
-                      value="Sunday, 23 August" /><span><i>Sunday</i><b>23 August 2026</b></span></label>
+                  <label class="day"><input type="radio" name="day" value="Sunday, 23 August" /><span><i>Sunday</i><b>23
+                        August 2026</b></span></label>
                 </div>
                 <div class="hint">Please choose a day.</div>
               </div>
@@ -2841,15 +2862,17 @@
                     <option value="Aman Gupta">Aman Gupta</option>
                     <option value="Dheeraj">Dheeraj</option>
                     <option value="Khush Yadav">Khush Yadav</option>
-                    <option value="Raghvender">Raghvender</option>
                     <option value="Raushan">Raushan</option>
-                    <option value="Satinder">Satinder</option>
                     <option value="Keshav Mishra">Keshav Mishra</option>
-                    <option value="Abhishek Jyani">Abhishek Jyani</option>
                     <option value="Geeta Khosla">Geeta Khosla</option>
                     <option value="Himanshi Mishra">Himanshi Mishra</option>
                     <option value="Saqib Khan">Saqib Khan</option>
                     <option value="Shivam Mishra">Shivam Mishra</option>
+                    <option value="Beer Singh">Beer Singh</option>
+                    <option value="Chandan Mishra">Chandan Mishra</option>
+                    <option value="Raja bajaj ">Raja bajaj </option>
+                    <option value="Meenu">Meenu</option>
+                    <option value="Ajay Kumar">Ajay Kumar</option>
                   </select>
                 </div>
                 <div class="hint">Please select an RM name.</div>
@@ -3634,8 +3657,8 @@
               <div class="days" role="radiogroup" aria-label="Event day">
                 <label class="day"><input type="radio" name="day" value="Saturday, 22 August"
                     checked /><span><i>Saturday</i><b>22 August 2026</b></span></label>
-                <label class="day"><input type="radio" name="day"
-                    value="Sunday, 23 August" /><span><i>Sunday</i><b>23 August 2026</b></span></label>
+                <label class="day"><input type="radio" name="day" value="Sunday, 23 August" /><span><i>Sunday</i><b>23
+                      August 2026</b></span></label>
               </div>
               <div class="hint">Please choose a day.</div>
             </div>
@@ -3680,15 +3703,17 @@
                   <option value="Aman Gupta">Aman Gupta</option>
                   <option value="Dheeraj">Dheeraj</option>
                   <option value="Khush Yadav">Khush Yadav</option>
-                  <option value="Raghvender">Raghvender</option>
                   <option value="Raushan">Raushan</option>
-                  <option value="Satinder">Satinder</option>
                   <option value="Keshav Mishra">Keshav Mishra</option>
-                  <option value="Abhishek Jyani">Abhishek Jyani</option>
                   <option value="Geeta Khosla">Geeta Khosla</option>
                   <option value="Himanshi Mishra">Himanshi Mishra</option>
                   <option value="Saqib Khan">Saqib Khan</option>
                   <option value="Shivam Mishra">Shivam Mishra</option>
+                  <option value="Beer Singh">Beer Singh</option>
+                  <option value="Chandan Mishra">Chandan Mishra</option>
+                  <option value="Raja bajaj ">Raja bajaj </option>
+                  <option value="Meenu">Meenu</option>
+                  <option value="Ajay Kumar">Ajay Kumar</option>
                 </select>
               </div>
               <div class="hint">Please select an RM name.</div>
