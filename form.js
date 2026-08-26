@@ -37,7 +37,12 @@ async function handleFormSubmit(formId) {
         // Gather form data
         const name = form.querySelector('[name="name"]')?.value.trim() || "";
         const phone = form.querySelector('[name="phone"]')?.value.trim() || "";
-        const city = form.querySelector('[name="city"]')?.value.trim() || "";
+        // city is a radio group, so read the selected one (fall back to a
+        // plain input if the field is ever changed back to free text)
+        const city =
+            form.querySelector('[name="city"]:checked')?.value.trim() ||
+            form.querySelector('input[name="city"]:not([type="radio"])')?.value.trim() ||
+            "";
         const email = form.querySelector('[name="email"]')?.value.trim() || "";
         const day = form.querySelector('[name="day"]:checked')?.value || "";
         const slot = form.querySelector('[name="slot"]:checked')?.value || "";
