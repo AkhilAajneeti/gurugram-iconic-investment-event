@@ -39,10 +39,10 @@ async function handleFormSubmit(formId) {
         const phone = form.querySelector('[name="phone"]')?.value.trim() || "";
         // city is a radio group, so read the selected one (fall back to a
         // plain input if the field is ever changed back to free text)
-        const city =
-            form.querySelector('[name="city"]:checked')?.value.trim() ||
-            form.querySelector('input[name="city"]:not([type="radio"])')?.value.trim() ||
-            "";
+        // const city =
+        //     form.querySelector('[name="city"]:checked')?.value.trim() ||
+        //     form.querySelector('input[name="city"]:not([type="radio"])')?.value.trim() ||
+        //     "";
         const email = form.querySelector('[name="email"]')?.value.trim() || "";
         const day = form.querySelector('[name="day"]:checked')?.value || "";
         const slot = form.querySelector('[name="slot"]:checked')?.value || "";
@@ -55,7 +55,7 @@ async function handleFormSubmit(formId) {
         let missingFields = [];
         if (!name) missingFields.push("Name");
         if (!phone) missingFields.push("Phone");
-        if (!city) missingFields.push("City");
+        // if (!city) missingFields.push("City");
         if (!email) missingFields.push("email");
         if (!day) missingFields.push("day");
         if (!slot) missingFields.push("slot");
@@ -94,7 +94,7 @@ async function handleFormSubmit(formId) {
             project_name: "axiomevent",
             form_name: name,
             form_mobile: phone,
-            form_city: city,
+            form_city: "Gurgaon",
 
             form_email: email,
             form_day: day,
